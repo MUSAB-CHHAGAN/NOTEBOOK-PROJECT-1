@@ -29,22 +29,26 @@ body {
 }
 .cover {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center;
   font-size: 35px;
   font-family: cursive;
+  box-shadow: 3px 3px 3px 3px black;
   font-weight: bold;
   position: relative;
   width: 100%;
   max-width: 900px;
   min-width: 400px;
   height: 480px;
-  background: rgb(66, 64, 64);
+  background: url(sky.png);
+  background-size: cover;
+  background-position: center;
   border-radius: 10px;
   color: whitesmoke;
   z-index: 1;
-  animation: cover 5s ease-in-out forwards;
+  animation: cover 3s ease-in-out forwards;
   animation-iteration-count: 1;
+  transform-origin: left;
 }
 .inside {
   width: 60px;
@@ -55,7 +59,7 @@ body {
   background: black;
 }
 #two {
-  animation: rotate 2s ease forwards;
+  animation: rotate 1s ease forwards;
   animation-iteration-count: 1;
 }
 @keyframes rotate {
@@ -75,13 +79,13 @@ body {
 }
 @keyframes cover {
   0% {
-    transform: translateX(0px);
+    transform: rotateZ(0deg);
   }
   50% {
-    transform: translateX(0px);
+    transform: rotateZ(0deg);
   }
   100% {
-    transform: translateX(-100%);
+    transform: rotateZ(180deg);
   }
 }
 .paper::before {
